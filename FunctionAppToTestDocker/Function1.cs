@@ -22,7 +22,7 @@ namespace FunctionAppToTestDocker
 			ILogger log)
 		{
 			log.LogInformation("Testing seeding database from inside the container.");
-			string connectionString = "mongodb://localhost:27017";
+			string connectionString = "mongodb://mongodbtest:27017";
 			string database = "DockerTestData";
 			bool overwriteDatabase = true;
 			string result = null;
