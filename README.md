@@ -2,7 +2,7 @@
 
 1) Clone this repo
 2) Open the folder where `docker-compose.yml` file resides in by VS Code
-3) Ensure that the latest version of docker is installed on your machine and woeking
+3) Ensure that the latest version of docker is installed on your machine and working
 4) Run `docker compose build` command to have the function app built
 5) Run `docker compose up` command to get the container run in docker
 6) Navigate to `http://localhost:9180/api/mongotest` to seed the mongo db database within the container. Unfortunately, the function raises error 500 due to inability to communicate
