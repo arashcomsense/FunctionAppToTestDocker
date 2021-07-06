@@ -82,6 +82,6 @@ mongodbtest.functionapp_1     |    at Microsoft.Azure.WebJobs.Host.Executors.Fun
 mongodbtest                   | {"t":{"$date":"2021-07-06T18:25:23.305+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"WTCheckpointThread","msg":"WiredTiger message","attr":{"message":"[1625595923:305742][1:0x7fafc3cc7700], WT_SESSION.checkpoint: [WT_VERc7700], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 5, snapshot max: 5 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0)"}}
 
 
-## Minor known issue
+## A minor known issue
 The http-triggered function's internal port was mapped to the external port # of 9081 but it may not be picked up. In that case, please consult the docker's UI to observe the
 function's extenal operational port number.
