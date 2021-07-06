@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  mongodbtest:
+    image: mongo
+    container_name: mongodbtest
+    restart: always
+    ports: 
+      - 47017:27017
+  mongodbtest.storage.emulator:
+    image: "mcr.microsoft.com/azure-storage/azurite:latest"
+    container_name: mongodbtest.storage.emulator
+    ports: 
+      - 30000:10000
+      - 30001:10001
+      - 30002:10002
+  mongodbtest.functionapp:
+    image: ${DOCKER_REGISTRY-}mongodbtestfunctionapp
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment: 
+      - AzureWebJobsStorage
+      - CORS_ALLOWED_ORIGINS
+    ports: 
+      - 9081:80
+    depends_on: 
+      - storage.mongodbtest.emulator
+      - mongodbtest

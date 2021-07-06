@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "FunctionAppToTestDocker": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 33580,
+      "useSSL": false
+    }
+  }
+}
